@@ -4,9 +4,9 @@
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "kmrs.mobile.app"
     version   = "3.4">
-    <name>Pa Llevar</name>
+    <name>Pa Llevar chelas</name>
     <description>
-        Delivery de comida
+        Delivery de bebidas
     </description>
     <author email="gandhi@algoritmoazul.com" href="http://cordova.io">
         algoritmoazul.com.com
