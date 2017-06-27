@@ -1,4 +1,5 @@
 
+
 var krms_config ={	
 	'ApiUrl' : "http://www.patraer.com/mobileapp/api",
 	'DialogDefaultTitle' : "Delivery de Cerveza",
