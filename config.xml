@@ -2,11 +2,11 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "kmrs.mobile.app"
+    id        = "pa.llevar.chela"
     version   = "3.4">
-    <name>Pa Llevar chelas</name>
+    <name>Pa Llevar</name>
     <description>
-        Delivery de bebidas
+        Delivery de cerveza y licor
     </description>
     <author email="gandhi@algoritmoazul.com" href="http://cordova.io">
         algoritmoazul.com.com
@@ -20,7 +20,7 @@
 		
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />
-       	
+    <gap:plugin name="com.paypal.cordova.mobilesdk" version="3.1.2" />            	
      <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm"  /> 
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
