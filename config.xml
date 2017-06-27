@@ -2,9 +2,9 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "pa.llevar.chela"
+    id        = "pa.traer.chela"
     version   = "3.4">
-    <name>Pa Llevar</name>
+    <name>Pa Traer</name>
     <description>
         Delivery de cerveza y licor
     </description>
