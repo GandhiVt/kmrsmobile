@@ -18,7 +18,7 @@ padding:8px;
 .orange-header
 {
 max-width:100%;
-background:#f75d34;
+background:#453951;
 color:#fff;
 padding-top:10px;
 padding-bottom:15px;
@@ -36,7 +36,7 @@ margin:auto;
 max-width:70%;
 }
 .navigation-bar{
-background:#f75d34;
+background:#2f243a;
 color:#fff;
 border:none;
 }
@@ -58,7 +58,7 @@ color:#00B279;
 
 
 .button.green-btn{
-background:#00B279;
+background:#e61560;
 }
 
 .button.blue-btn{
@@ -158,7 +158,7 @@ font-size:14px;
 z-index:11;
 }
 
-.arrow_box { position: relative; background: #00B279; } .arrow_box:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 178, 121, 0); border-top-color: #00B279; border-width: 8px; margin-left: -8px; }
+.arrow_box { position: relative; background: #2fcc71; } .arrow_box:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 178, 121, 0); border-top-color: #2fcc71; border-width: 8px; margin-left: -8px; }
 
 .modal{
 background:rgba(255, 255, 255, 0.1);
