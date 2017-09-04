@@ -14,30 +14,33 @@
     <icon src="icon.png" />           
     <content src="index.html" />
                
-	<preference name="orientation" value="portrait" />
-	<preference name="android-build-tool" value="gradle" />
-	<preference name="permissions" value="none"/>
-    	
-		
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+<preference name="orientation" value="portrait" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="permissions" value="none"/>   
+        
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />
-    <gap:plugin name="cordova-plugin-android-permissions" source="npm" />
-     	
-     <gap:plugin name="cordova-plugin-device" source="npm" />
+            
+    <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm"  /> 
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-    <gap:plugin name="cordova-plugin-geolocation" source="npm" spec="1.0.1" /> 
+    <gap:plugin name="cordova-plugin-geolocation" source="npm" /> 
     <gap:plugin name="cordova-plugin-network-information" source="npm" /> 
     <gap:plugin name="cordova-plugin-media" source="npm" />
-		
-    <gap:plugin name="cordova-plugin-fastrde-checkgps" source="npm" spec="1.0.0"  />
-	<gap:plugin spec="https://github.com/rodrigo-martinezd/cordova-dialog-gps.git" source="git" />
+     
+     
+    
+    
+    
+        
+    <gap:plugin name="cordova-plugin-fastrde-checkgps" source="npm" />
+    <gap:plugin spec="https://github.com/rodrigo-martinezd/cordova-dialog-gps.git" source="git" />
 
-	<gap:splash src="splash.png" />
-	<preference name="AutoHideSplashScreen" value="false" />  	
+    <gap:splash src="splash.png" />
+    <preference name="AutoHideSplashScreen" value="false" />    
     <preference name="SplashScreenDelay" value="10000" />    
     <preference name="fullscreen" value="false" />
-	
+    
     <access origin="*" />
        
     <gap:config-file platform="android" parent="/manifest">
