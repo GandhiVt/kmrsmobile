@@ -34,98 +34,37 @@ function privatePriceRowWithRadio2(radio_name,radio_value,label,price,ischecked)
     return htm;
 }
 
-function subItemRowWithRadio(subcat_id,radio_name,radio_value,label,price,ischecked , description)
+function subItemRowWithRadio(subcat_id,radio_name,radio_value,label,price,ischecked)
 {
-	
-	var show_addon_description=getStorage("show_addon_description");	
-	
 	var htm='';
 	htm+='<ons-list-item modifier="tappable">';
     htm+='<ons-row class="row">';
-    
-     if(show_addon_description==1){
-        htm+='<ons-col class="concat-text" width="10%">';
-     } else {
-     	htm+='<ons-col class="concat-text" width="60%">';
-     }
-     
+     htm+='<ons-col class="concat-text" width="60%">';
        htm+='<label class="radio-button checkbox--list-item">';
 	     htm+='<input type="radio" name="'+radio_name+subcat_id+'" class="'+radio_name+' sub_item_name_'+subcat_id+'" value="'+radio_value+'" '+ischecked+' data-id="'+subcat_id+'"  >';
 	     htm+='<div class="radio-button__checkmark checkbox--list-item__checkmark"></div>';
-	     
-	     if(show_addon_description!=1){
 	     htm+='<p class="description item-name concat-text"> '+label+'</p>';
-	     }
-	     
 	   htm+='</label>';
 	  htm+='</ons-col>';	
-	  
-	  if(show_addon_description==1){
-	     htm+='<ons-col class="small-font-dim" width="30%" style="margin-top:10px;" >'+label+'</ons-col>';
-	  }
-	  
-	  if(empty(description)){
-	  	description='';
-	  }
-	  
-	  if(show_addon_description==1){
-	  htm+='<ons-col class="small-font-dim" width="40%" style="margin-top:10px;padding-left:5px;" >'+description+'</ons-col>';
-	  }	  
-	  
-	  if(show_addon_description==1){
-	    htm+='<ons-col class="text-right" width="20%" ><price>'+price+'</price></ons-col>';
-	  } else {
-	  	htm+='<ons-col class="text-right" ><price>'+price+'</price></ons-col>';
-	  }
+	  htm+='<ons-col class="text-right" ><price>'+price+'</price></ons-col>';
     htm+='</ons-row>';
     htm+='</ons-list-item>';
     return htm;
 }
 
-function subItemRowWithCheckbox(subcat_id, radio_name, radio_value, label, price, multi_option_val, description )
+function subItemRowWithCheckbox(subcat_id, radio_name, radio_value, label, price, multi_option_val)
 {
-	
-	var show_addon_description=getStorage("show_addon_description");	
-		
 	var htm='';
 	htm+='<ons-list-item modifier="tappable">';
     htm+='<ons-row class="row">';
-    
-     if(show_addon_description==1){
-        htm+='<ons-col class="concat-text" width="10%">';
-     } else {
-     	htm+='<ons-col class="concat-text" width="60%">';
-     }
-          
+     htm+='<ons-col class="concat-text" width="60%">';
        htm+='<label class="checkbox checkbox--list-item">';
 	     htm+='<input type="checkbox" name="'+radio_name+'" class="sub_item_custom '+radio_name+' sub_item_name_'+subcat_id+' " value="'+radio_value+'" data-id="'+subcat_id+'" data-multi="'+multi_option_val+'"  >';
 	     htm+='<div class="checkbox__checkmark checkbox--list-item__checkmark"></div>';
-	     
-	     if(show_addon_description!=1){
-	       htm+='<p class="description item-name concat-text"> '+label+'</p>';
-	     }
-	     
+	     htm+='<p class="description item-name concat-text"> '+label+'</p>';
 	   htm+='</label>';
 	  htm+='</ons-col>';	
-	  	  
-	  if(show_addon_description==1){
-	     htm+='<ons-col class="small-font-dim" width="30%" style="margin-top:10px;" >'+label+'</ons-col>';
-	  }
-	  
-	  if(empty(description)){
-	  	description='';
-	  }
-	  
-	  if(show_addon_description==1){
-	     htm+='<ons-col class="small-font-dim" width="40%" style="margin-top:10px;padding-left:5px;" >'+description+'</ons-col>';
-	  }
-	  
-	  if(show_addon_description==1){
-	    htm+='<ons-col class="text-right" width="20%" ><price>'+price+'</price></ons-col>';
-	  } else {
-	  	htm+='<ons-col class="text-right" ><price>'+price+'</price></ons-col>';
-	  }
-	  
+	  htm+='<ons-col class="text-right" ><price>'+price+'</price></ons-col>';
     htm+='</ons-row>';
     htm+='</ons-list-item>';
     return htm;
@@ -133,7 +72,6 @@ function subItemRowWithCheckbox(subcat_id, radio_name, radio_value, label, price
 
 function subItemRowWithCheckboxQty(subcat_id,radio_name,radio_value,label,price)
 {
-			
 	var htm='';
 	htm+='<ons-list-item modifier="tappable">';
     htm+='<ons-row class="row">';
@@ -240,16 +178,13 @@ function tplCartRowNoBorder(item_id, item_name, price, pretty_price, qty, field_
 		  htm+='<input type="hidden" name="discount" class="discount'+x+' " value="'+ discount +'" >';
 
 		  if (discount>0){
-		  	  //price2='<price class="discount">'+ (parseFloat(price2)+parseFloat(discount)) +'</price> '+price2;
+		  	  price2='<price class="discount">'+ (parseFloat(price2)+parseFloat(discount)) +'</price> '+price2;
 		  }
 		  
-		  /*alert(price2);
-		  alert(size);*/
-		  
 		  if (empty(size))	{
-		     htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price2)+' '+item_name+'</p>';
+		     htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+price2+' '+item_name+'</p>';
 		  } else {
-		  	htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price2)+" "+item_name+
+		  	htm+='<p class="description item-name concat-text bold"><span class="qty-label">'+qty+"x</span> "+price2+" "+item_name+
 		  	" <size>("+size+")</size>"
 		  	+'</p>';
 		  }
@@ -282,7 +217,7 @@ function tplCartRowNoBorderSub(subcat_id, sub_item_id, item_name, price, pretty_
 		  htm+='<input type="hidden" name="sub_item_price" class="sub_item_price" value="'+price+'">';
 		  htm+='<input type="hidden" name="sub_item_name" class="sub_item_name" value="'+item_name+'">';
 		  
-		  htm+='<p class="description item-name concat-text"><span class="qty-label">'+qty+"x</span> "+prettyPrice(price)+" "+item_name+'</p>';
+		  htm+='<p class="description item-name concat-text"><span class="qty-label">'+qty+"x</span> "+price+" "+item_name+'</p>';
 	   htm+='</ons-col>';
 	   htm+='<ons-col class="text-right" ><price>'+pretty_price+'</price></ons-col>';
    htm+='</ons-row>';
@@ -372,7 +307,7 @@ function tplPaymentList(radio_name, radio_value, label, icons)
              htm+='</label>';
           htm+='</ons-col>';
           htm+='<ons-col class="text-right '+radio_value+'" >';
-            htm+='<ons-icon icon="'+icons+'" ></ons-icon>';
+            htm+='<ons-icon icon="'+icons+'"></ons-icon>';
           htm+='</ons-col>';
        htm+='</ons-row>';
      htm+='</ons-list-item>';
@@ -437,50 +372,5 @@ function tplReviews(rating, client_name, review, date_review)
 		 htm+='</ons-row>';
 	  htm+='</ons-list-item>';
 	htm+='</ons-list>';
-	return htm;
-}
-
-function customFields(name, placeholder)
-{
-	var htm='';	
-	htm+='<div class="field-wrapper">';
-	  htm+='<input type="text" name="'+name+'"  class="text-input text-input--underbar" placeholder="'+placeholder+'" value="" has_validation data-validation="required" data-validation-error-msg="this field is mandatory!" >';
-	htm+='</div>';
-	return htm;
-}
-
-function DineinFields()
-{
-	var htm='';	
-	htm+='<div class="wrapper">';
-       htm+='<ons-row class="row">';
-           htm+='<ons-col class="text-big trn">'+ getTrans("Dine in information",'dine_in_information') +'</ons-col>';
-       htm+='</ons-row>';
-   htm+='</div>';
-   
-    htm+='<div class="field-wrapper">';
-      htm+='<input type="text" name="dinein_number_of_guest"  class="numeric_only2 dinein_number_of_guest text-input text-input--underbar has_validation" placeholder="'+  getTrans("Number of guest",'number_of_guest') + '" data-validation="required" data-validation-error-msg="this field is mandatory!"   >';
-   htm+='</div>';
-   
-   htm+='<div class="field-wrapper">';
-      htm+='<input type="text" name="dinein_special_instruction"  class="dinein_special_instruction text-input text-input--underbar has_validation" placeholder="'+ getTrans("Special Instructions",'special_instruction') + '" >';
-   htm+='</div> ';
-   
-	return htm;
-}
-
-function ContactNumberFields()
-{
-	var htm='';	
-	htm+='<div class="wrapper">';
-       htm+='<ons-row class="row">';
-           htm+='<ons-col class="text-big trn">'+ getTrans("Contact information",'contact_information') +'</ons-col>';
-       htm+='</ons-row>';
-   htm+='</div>';
-   
-    htm+='<div class="field-wrapper">';
-      htm+='<input type="text" name="contact_phone"  class="mobile_inputs contact_phone text-input text-input--underbar has_validation" placeholder="'+  getTrans("Contact phone",'contact_phone') + '" value="" data-validation="required" data-validation-error-msg="this field is mandatory!"   >';
-   htm+='</div>';
-      
 	return htm;
 }
