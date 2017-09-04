@@ -3366,12 +3366,14 @@ function initMerchantMap(data)
 	}
 }
 
-function getCurrentLocationOld()
-{        
-    loader.show();
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
-    { timeout:10000 , enableHighAccuracy: getLocationAccuracy() } );             
-},
+function getCurrentLocation()
+{	
+   CheckGPS.check(function win(){
+    //GPS is enabled! 
+     loader.show();
+	 navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
+	 { timeout:5000 , enableHighAccuracy: true } );	
+   },
    function fail(){
       //GPS is disabled!
       var m_1= getTrans('Your GPS is disabled, this app needs to be enabled to work.','your_gps');
