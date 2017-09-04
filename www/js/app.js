@@ -4589,13 +4589,13 @@ function onRequestFailure(error){
 }
 
 function getCurrentLocationOld()
-{	
-   CheckGPS.check(function win(){
-    //GPS is enabled! 
-     loader.show();
-	 navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
-	 { timeout:10000 , enableHighAccuracy: getLocationAccuracy() } );	
+{        
+    loader.show();
+    navigator.geolocation.getCurrentPosition(geolocationSuccess,geolocationError, 
+    { timeout:10000 , enableHighAccuracy: getLocationAccuracy() } );             
+}	
    },
+   
    function fail(){
       //GPS is disabled!
       var m_1= getTrans('Your GPS is disabled, this app needs to be enabled to work.','your_gps');
