@@ -3,10 +3,10 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
     id        = "pa.traer.chela"
-    version   = "3.4">
-    <name>Pa Traer</name>
+    version   = "3.4.1">
+    <name>Mi Bar 24</name>
     <description>
-        Delivery de cerveza y licor
+        Delivery de bebidas y piqueos a cualquier hora del día
     </description>
     <author email="gandhi@algoritmoazul.com" href="http://cordova.io">
         algoritmoazul.com.com

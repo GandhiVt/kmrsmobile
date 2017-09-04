@@ -17,11 +17,11 @@ padding:8px;
 .home-header,
 .orange-header
 {
-max-width:100%;
-background:#453951;
-color:#fff;
-padding-top:10px;
-padding-bottom:15px;
+    max-width: 100%;
+    background: #e61560;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .orange-header{
 padding-left:8px;
@@ -36,7 +36,7 @@ margin:auto;
 max-width:70%;
 }
 .navigation-bar{
-background:#2f243a;
+background:#e61560;
 color:#fff;
 border:none;
 }
